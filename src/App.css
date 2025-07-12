@@ -1,0 +1,296 @@
+body {
+  background-image: url("./bgImage.webp");
+  background-size: cover;
+  /* background-position: center; */
+}
+
+#root {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* height: 100vh; */
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #f0f5ffa5;
+  box-shadow: 0px 5px 5px #242424;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  box-shadow: 0 4px 8px 0 #0dcebe;
+}
+
+.logo-png {
+  width: 50px;
+  padding: 2rem;
+}
+
+header > h1 {
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+
+#searchContainer {
+  margin-top: 100px;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.searchFlex {
+  padding: 1rem;
+  color: #242424;
+  text-align: right;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: right;
+}
+
+.label {
+  font-size: large;
+  font-weight: 600;
+}
+
+input[type="date"] {
+  width: 55%;
+}
+
+input[type="text"],
+input[type="checkbox"],
+input[type="date"] {
+  margin: 1rem;
+  outline: none;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: skyblue; /* blue border */
+  outline: none;
+  box-shadow: 0 0 0 3px #0dcebe; /* subtle blue glow */
+}
+
+.advaneSearch {
+  cursor: pointer;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.searchButton {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: medium;
+  outline: none;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: #242424;
+}
+
+.paxContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  background: #0dcebec6;
+}
+
+.paxDetails {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  color: #242424;
+}
+
+.value {
+  font-weight: 600;
+}
+
+.bagImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+}
+
+.bagImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.instruction {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  color: #242424;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.airportCode {
+  font-weight: 500;
+}
+
+.airportCodeHiglighted {
+  font-size: larger;
+  font-weight: 500;
+  fill: blue;
+  text-decoration: overline;
+}
+
+.airportCode:hover {
+  fill: #0056b3;
+  text-decoration: underline;
+}
+
+.tile {
+  width: 100%;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tile > h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.latestHndlUpd {
+  font-weight: 300;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+thead {
+  color: aliceblue;
+  background-color: #0dcebe; /* light gray */
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+tr {
+  color: #242424;
+}
+
+tr:nth-child(even) {
+  background-color: #82c2bc;
+}
+
+tr:hover {
+  color: #f0f5ff;
+  background-color: #242424;
+  transition: background-color 0.3s;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #242424;
+}
+
+.footerSocial {
+  display: flex;
+  align-items: center;
+}
+.social {
+  margin: 7px;
+  height: 30px;
+}
+
+.notFound {
+  position: absolute;
+  right: 1rem;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  background: #242424;
+  box-shadow: 0 4px 4px 1px #0dcebe;
+  border-radius: 2rem;
+  /* display: none; */
+}
+
+.notFoundText {
+  transform: translate(0%, +50%);
+}
+
+.cancelButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+}
