@@ -48,8 +48,12 @@ export default function Search(props) {
         }
         if (!res.success) {
           const notFound = document.getElementsByClassName("notFound");
-          props.setToggleFound((prev) => !prev);
-          console.log(notFound);
+          props.setFlags((prev) => {
+            return {
+              networkError: false,
+              searchFound: !prev.searchFound,
+            };
+          });
           setTimeout(() => {
             notFound[0].style.display = "none";
           }, 2000);
@@ -57,6 +61,16 @@ export default function Search(props) {
         props.setBagHistory(res);
       })
       .catch((error) => {
+        const notFound = document.getElementsByClassName("notFound");
+        props.setFlags((prev) => {
+          return {
+            searchFound: !prev.searchFound,
+            networkError: true,
+          };
+        });
+        setTimeout(() => {
+          notFound[0].style.display = "none";
+        }, 2000);
         console.log(error);
       });
   };

@@ -31,7 +31,10 @@ function App() {
     },
   });
 
-  const [toggleFound, setToggleFound] = useState(false);
+  const [flags, setFlags] = useState({
+    searchFound: false,
+    networkError: false,
+  });
 
   useEffect(() => {
     const notFound = document.getElementsByClassName("notFound");
@@ -53,7 +56,9 @@ function App() {
   }
   return (
     <>
-      {!bagHistory.success && <NotFound key={toggleFound} animate={animate} />}
+      {!bagHistory.success && (
+        <NotFound key={flags.searchFound} animate={animate} flags={flags} />
+      )}
       <Header />
       <Search
         key="search"
@@ -62,7 +67,7 @@ function App() {
         setSelected={setSelected}
         setAnimate={setAnimate}
         setPaxDetails={setPaxDetails}
-        setToggleFound={setToggleFound}
+        setFlags={setFlags}
       />
       {bagHistory.success && (
         <PaxDetails key="pax" paxDetails={paxDetails} animate={animate} />
