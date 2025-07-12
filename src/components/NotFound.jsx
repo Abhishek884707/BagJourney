@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 
-const NotFound = ({ animate }) => {
+const NotFound = ({ animate, flags }) => {
   function handleClick() {
     const notFound = document.getElementsByClassName("notFound");
     notFound[0].style.display = "none";
   }
+
+  console.log(flags);
   return (
     <motion.div
       initial={{
@@ -17,7 +19,11 @@ const NotFound = ({ animate }) => {
       <button className="cancelButton" onClick={handleClick}>
         x
       </button>
-      <h1 className="notFoundText">No data found!</h1>
+      <h1 className="notFoundText">
+        {flags.networkError
+          ? "System is Currently Unavailable!!."
+          : "No Data Found!"}
+      </h1>
     </motion.div>
   );
 };
