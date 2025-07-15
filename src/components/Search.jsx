@@ -34,6 +34,7 @@ export default function Search(props) {
               firstName: res.firstName,
               lastName: res.lastName,
               weightDetails: res.weightDetails,
+              frequentFlyerId: res.frequentFlyerId,
               reconciliation: res.reconciliation,
               animateToggle: !prev.animateToggle,
             };
@@ -56,7 +57,7 @@ export default function Search(props) {
           });
           setTimeout(() => {
             notFound[0].style.display = "none";
-          }, 2000);
+          }, 2500);
         }
         props.setBagHistory(res);
       })
@@ -70,7 +71,7 @@ export default function Search(props) {
         });
         setTimeout(() => {
           notFound[0].style.display = "none";
-        }, 2000);
+        }, 2500);
         console.log(error);
       });
   };
