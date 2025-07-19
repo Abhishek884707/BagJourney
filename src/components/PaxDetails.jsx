@@ -2,7 +2,13 @@ import { motion } from "motion/react";
 import Util from "../utility/Util";
 
 const PaxDetails = ({ paxDetails, animate }) => {
-  const { firstName, lastName, weightDetails, reconciliation } = paxDetails;
+  const {
+    firstName,
+    lastName,
+    frequentFlyerId,
+    weightDetails,
+    reconciliation,
+  } = paxDetails;
 
   const randomImage = "/bagImage" + (Math.floor(Math.random() * 3) + 1);
   return (
@@ -21,16 +27,14 @@ const PaxDetails = ({ paxDetails, animate }) => {
             <div>
               <p>FirstName:</p>
               <p>LastName:</p>
-              <p>Pax Status:</p>
+              <p>Frequent Flyer Id:</p>
               <p>Total No. Bags:</p>
               <p>Weight:</p>
             </div>
             <div className="paxValues">
               <p className="value">{firstName}</p>
               <p className="value">{lastName}</p>
-              <p className="value">
-                {reconciliation.passengerStatus == "A" ? "Active" : "Inactive"}
-              </p>
+              <p className="value">{frequentFlyerId}</p>
               <p className="value">{weightDetails.numberOfCheckedBag}</p>
               <p className="value">{`${weightDetails.checkedWeight} ${weightDetails.indicator}`}</p>
             </div>
