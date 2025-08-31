@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <p className="footerText">
-        {`Copyright \u00A9 ${year} Abhishek Kumar Mourya. All right reserved.`}
+        {`Copyright \u00A9 ${year} Abhishek Kumar Mouriya. All right reserved.`}
       </p>
       <div className="footerSocial">
         <img src={instagram} alt="Instagram Logo" className="social" />
