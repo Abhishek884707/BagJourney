@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/v1";
+const BASE_URL = "http://localhost:8080/bagjourney-services/v1";
 const URL = "/bim";
 
 const api = axios.create({
