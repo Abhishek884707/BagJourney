@@ -21,7 +21,7 @@ const History = (props) => {
             <>
               <div className="tile">
                 <h1>
-                  <span className="latestHndlUpd">Sou</span>
+                  <span className="latestHndlUpd">Departure</span>
                   {" : "}
                   {airport.source}
                 </h1>
@@ -31,7 +31,7 @@ const History = (props) => {
                   {latestEvent}
                 </h1>
                 <h1>
-                  <span className="latestHndlUpd">Des</span>
+                  <span className="latestHndlUpd">Arrival</span>
                   {" : "}
                   {airport.destination}
                 </h1>

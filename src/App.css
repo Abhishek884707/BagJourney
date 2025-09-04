@@ -125,6 +125,7 @@ input:focus {
   justify-content: space-between;
   font-size: large;
   color: #242424;
+  width: 110%;
 }
 
 .value {
