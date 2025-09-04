@@ -7,7 +7,6 @@ const PaxDetails = ({ paxDetails, animate }) => {
     lastName,
     frequentFlyerId,
     weightDetails,
-    reconciliation,
   } = paxDetails;
 
   const randomImage = "/bagImage" + (Math.floor(Math.random() * 3) + 1);
@@ -23,20 +22,23 @@ const PaxDetails = ({ paxDetails, animate }) => {
     >
       {
         <>
-          <div className="paxDetails">
-            <div>
-              <p>FirstName:</p>
-              <p>LastName:</p>
-              <p>Frequent Flyer Id:</p>
-              <p>Total No. Bags:</p>
-              <p>Weight:</p>
-            </div>
-            <div className="paxValues">
-              <p className="value">{firstName}</p>
-              <p className="value">{lastName}</p>
-              <p className="value">{frequentFlyerId}</p>
-              <p className="value">{weightDetails.numberOfCheckedBag}</p>
-              <p className="value">{`${weightDetails.checkedWeight} ${weightDetails.indicator}`}</p>
+          <div className="paxDetailsCard">
+            <h2>Passenger Information</h2>
+            <div className="paxDetails">
+              <div>
+                <p>FirstName:</p>
+                <p>LastName:</p>
+                <p>Frequent Flyer Id:</p>
+                <p>Total No. Bags:</p>
+                <p>Weight:</p>
+              </div>
+              <div className="paxValues">
+                <p className="value">{firstName}</p>
+                <p className="value">{lastName}</p>
+                <p className="value">{frequentFlyerId}</p>
+                <p className="value">{weightDetails.numberOfCheckedBag}</p>
+                <p className="value">{`${weightDetails.checkedWeight} ${weightDetails.indicator}`}</p>
+              </div>
             </div>
           </div>
           <div className="bagImage">

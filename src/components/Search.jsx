@@ -80,7 +80,7 @@ export default function Search(props) {
     const { name } = event.currentTarget;
     setSearch((prevSearch) => ({
       ...prevSearch,
-      [name]: !prevSearch.advanceSearch,
+      [name]: !prevSearch .advanceSearch,
     }));
   }
 
