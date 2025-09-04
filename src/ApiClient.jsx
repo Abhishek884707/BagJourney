@@ -67,9 +67,8 @@ const matchData = (data) => {
         }
       );
     }
-    if (event.flightInformation.onwards != null) {
-      const onwards = event.flightInformation.onwards;
-      window.alert(onwards);
+    if (event.flightInformation.onward != null) {
+      const onwards = event.flightInformation.onward;
       onwards.forEach((flight) => {
         airortDataEventsList.set(flight.destinationAirport, {
           source: event.flightInformation.outbound.destinationAirport,

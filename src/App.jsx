@@ -27,7 +27,7 @@ function App() {
     opacity: 1,
     transition: {
       duration: 1.5,
-      ease: "easeOut",
+      ease: "easeOut", 
     },
   });
 
