@@ -36,7 +36,7 @@ const matchData = (data) => {
       if (event.baggageSourceIndicator == "T") {
         evt.source = event.eventStation;
         evt.previousHandlingStation =
-          event.flightInformation.inbound.sourceAirport;
+        event.flightInformation.inbound.sourceAirport;
         evt.destination = event.flightInformation.outbound.destinationAirport;
         evt.events = [event];
         evt.isSelected = false;
@@ -54,31 +54,34 @@ const matchData = (data) => {
     }
   });
 
-  if (bagTagEvents.length == 1) {
-    const event = bagTagEvents[0];
+  bagTagEvents.map((event) => {
     if (event.flightInformation.outbound != null) {
-      airortDataEventsList.set(
-        event.flightInformation.outbound.destinationAirport,
-        {
-          source: event.eventStation,
-          destination: event.flightInformation.outbound.destinationAirport,
-          events: [],
-          isSelected: false,
+      const outbound = event.flightInformation.outbound;
+        let airportEvent = airortDataEventsList.get(outbound.destinationAirport);
+        if (airportEvent == null || airportEvent == undefined) {
+          airortDataEventsList.set(outbound.destinationAirport, {
+            source: event.flightInformation.outbound.destinationAirport,
+            destination: outbound.destinationAirport,
+            events: [],
+            isSelected: false,
+          });
         }
-      );
-    }
+      }
     if (event.flightInformation.onward != null) {
       const onwards = event.flightInformation.onward;
       onwards.forEach((flight) => {
-        airortDataEventsList.set(flight.destinationAirport, {
-          source: event.flightInformation.outbound.destinationAirport,
-          destination: flight.destinationAirport,
-          events: [],
-          isSelected: false,
+        let airportEvent = airortDataEventsList.get(flight.destinationAirport);
+        if (airportEvent == null || airportEvent == undefined) {
+          airortDataEventsList.set(flight.destinationAirport, {
+            source: event.flightInformation.outbound.destinationAirport,
+            destination: flight.destinationAirport,
+            events: [],
+            isSelected: false,
+          });
+        }
         });
-      });
-    }
-  }
+      }
+    });
 
   return airortDataEventsList;
 };

@@ -119,13 +119,19 @@ input:focus {
   background: #0dcebec6;
 }
 
+.paxDetailsCard h2{
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+}
+
 .paxDetails {
   width: 25%;
   display: flex;
   justify-content: space-between;
   font-size: large;
   color: #242424;
-  width: 110%;
+  width: 100%;
 }
 
 .value {
